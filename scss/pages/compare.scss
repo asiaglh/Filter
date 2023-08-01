@@ -1,0 +1,315 @@
+.compare{
+  .page-title{
+    @include tabletS{
+      text-align: left;
+    }
+  }
+
+  .comparison-table{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border: 1px solid #e6e6e6;
+    border-radius: 30px;
+    border-bottom-color: transparent;
+    @include tablet{
+      border-radius: 0;
+    }
+    @include mobileL{
+      margin: 15px -10px 30px -10px;
+    }
+    .product-slide-info{
+      border-right: 1px solid #e6e6e6;
+      border-bottom: 1px solid #e6e6e6;
+    }
+    .inner{
+      width: 100%;
+      margin: 0 auto;
+      img{
+        @include tablet {
+          height: 172px;
+        }
+      }
+    }
+    .product{
+      max-width: none;
+      width: 100%;
+      min-height: 0;
+      border: 0;
+      height: 389px;
+      max-height: 390px;
+      border-radius: 0!important;
+      border: none!important;
+      @include tablet{
+        height: 330px;
+      }
+      @include mobileL{
+        width: 200px;
+      }
+      .country{
+        font: 400 14px/1.4 "PT sans",sans-serif;
+        color: #7d848e;
+        margin-top: 4px;
+      }
+      .price{
+        span {
+          font: 500 20px/1.4 "Exo 2", sans-serif !important;
+        }
+        display: inline-block;
+      }
+      .old-price{
+        @include tablet{
+          display: none;
+        }
+      }
+      .btn-1{
+        display: inline-block;
+        padding: 8px;
+      }
+    }
+    .fixed-side{
+      min-width: 300px;
+      @include tablet{
+        min-width: 250px;
+      }
+      @include mobileL{
+        display: none;
+      }
+    }
+    .add-product {
+      border-radius: 30px 0 0 0;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 0 -1px;
+      min-height: 389px;
+      border: 1px solid #1b8aff;
+      transform: translateY(-1px);
+      height: 389px;
+      @include tablet{
+        border-radius: 0;
+        min-height: 330px;
+        height: 330px;
+      }
+      a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .inside {
+        text-align: center;
+      }
+      .image {
+        margin-bottom: 25px;
+      }
+      .text{
+        font: 600 13px/18px 'Exo 2',sans-serif;
+        color: #1b8aff;
+        text-transform: uppercase;
+      }
+    }
+    .characteristics{
+      padding: 40px 0 40px 35px;
+      min-height: 100px;
+      border-right: 1px solid #e6e6e6;
+      border-bottom: 1px solid #e6e6e6;
+      @include tablet{
+       padding: 20px 0 20px 15px;
+      }
+      .title{
+        margin-bottom: 10px;
+        font: 400 24px/24px 'Exo 2',sans-serif;
+        color: #373b3f;
+      }
+      .show_diff {
+        display: inline-block;
+        margin-bottom: 10px;
+        text-transform: initial;
+        font: 400 16px/20px 'PT sans',sans-serif;
+        color: #1b8aff;
+        border-bottom: 1px dotted #1b8aff;
+      }
+    }
+    .empty {
+      height: 389px;
+      min-height: 369px;
+      border-right: 1px solid #e6e6e6;
+      border-bottom: 1px solid #e6e6e6;
+      border-radius: 0 0 0 30px;
+      @include tablet{
+        height: 330px;
+        min-height: 330px;
+        border-radius: 0;
+      }
+    }
+    &.none{
+      .compare-slider{
+        display: none;
+      }
+      .characteristics{
+        ul{
+          display: none;
+        }
+      }
+    }
+  }
+  ul{
+    li{
+      font: 400 14px/32px 'PT sans',sans-serif;
+      color: #7e838c;
+    }
+  }
+  .slider-side{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0 0 30px 0;
+    @include tablet{
+      border-radius: 0;
+    }
+  }
+  .compare-slider{
+    position: relative;
+    width: 100%;
+    @include mobileL{
+      display: none;
+    }
+    .slick-arrow{
+      outline: none;
+      border-radius: 50%;
+      font-size: 0;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 160px;
+      z-index: 10;
+      padding: 16px;
+      @include tablet{
+        display: none;
+      }
+      svg{
+        @include tablet{
+          display: none;
+        }
+        path {
+          transition: .35s;
+        }
+      }
+      &:hover{
+        svg{
+          path{
+            fill: #5189ff;
+          }
+        }
+      }
+    }
+    .slick-prev{
+      left: 0;
+      transform: rotate(-45deg);
+      svg{
+        transform: rotate(45deg);
+      }
+    }
+    .slick-next{
+      transform: rotate(45deg);
+      svg{
+        transform: rotate(-45deg);
+      }
+      right: 0;
+    }
+
+    .compare-slide{
+      max-width: 270px;
+      width: 270px;
+      outline: none;
+      border-bottom: 1px solid #e6e6e6;
+      position: relative;
+      @include tablet{
+        max-width: 200px;
+        width: 200px;
+      }
+      .compare-slide-close{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        z-index: 1;
+      }
+      .product-slide-characteristics{
+        padding: 104px 0 40px 18px;
+        border-bottom: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+        @include tablet{
+          padding: 84px 0 20px 18px;
+        }
+      }
+    }
+  }
+}
+
+
+.compare-mobile-slider {
+  display: none;
+  flex-direction: column;
+  padding-bottom: 50px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  @include mobileL {
+    display: flex;
+  }
+}
+
+.compare-mobile-slider ::-webkit-scrollbar {
+  display: none; /* Приховуємо полосу прокрутки для WebKit браузерів */
+}
+
+.slider-cards {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.slider-cards::-webkit-scrollbar {
+  display: none; /* Приховуємо полосу прокрутки для WebKit браузерів */
+}
+
+.table-title {
+  text-align: center;
+  font-family: "Exo 2";
+  font-weight: 600;
+  font-size: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f3f3f3;
+  padding: 10px 0;
+  width: 100vw;
+}
+
+.data-items {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  li {
+    min-width: 200px;
+    padding: 5px 0;
+    width: 200px;
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+  }
+}
+
+.data-items::-webkit-scrollbar {
+  display: none; /* Приховуємо полосу прокрутки для WebKit браузерів */
+}

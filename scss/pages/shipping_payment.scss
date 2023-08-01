@@ -1,0 +1,91 @@
+.payment-items{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding: 45px;
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  @include tabletS{
+    justify-content: space-between;
+    margin-top: 0;
+    padding: 75px 20px 20px 20px;
+  }
+  @include tablet{
+    justify-content: center;
+    margin: 0 auto 50px;
+    max-width: 400px;
+  }
+  .item{
+    &:first-child, &:nth-child(2){
+      margin-bottom: 70px;
+    }
+    -webkit-box-flex: 1;
+    flex: 1 1 320px;
+    margin-right: 120px;
+    max-width: 437px;
+    padding: 0 0 0 87px;
+    position: relative;
+    @include tabletS{
+      flex: 1 1 287px;
+      margin-right: 18px;
+      padding: 25px 0 0 0;
+      max-width: 287px;
+    }
+    @include tablet{
+      text-align: center;
+      margin-bottom: 70px;
+      &:last-child{
+        margin-bottom: 10px;
+      }
+    }
+    a{
+      color: #1a8aff;
+      text-transform: initial;
+    }
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include tabletS{
+        top: -37px;
+      }
+      @include tablet{
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .title{
+      margin-bottom: 20px;
+      font: 400 24px "Exo 2",sans-serif;
+      color: #3b3d41;
+    }
+    .text{
+      margin-bottom: 10px;
+      font: 400 14px/18px "PT sans",sans-serif;
+      color: #3b3d41;
+    }
+  }
+}
+
+.info-items {
+  display: flex;
+  margin-bottom: 120px;
+  margin-top: 60px;
+
+  &.shipping {
+    margin-bottom: 60px;
+    .warranty_item {
+      margin-right: 30px;
+      padding: 40px 30px 30px 30px;
+      @include tablet{
+        margin: 0 0 40px 0;
+        max-width: 400px;
+        text-align: center;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

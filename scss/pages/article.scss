@@ -1,0 +1,249 @@
+.blog-post-content-wrap{
+  display: flex;
+  justify-content: center;
+  img{
+    max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .blog-post-main{
+    margin: 0 auto;
+    .blog-post-header{
+      position: relative;
+      margin-bottom: 30px;
+      .top-image{
+        position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          background: linear-gradient(to top,#fff 15%,rgba(255,255,255,.2) 60%,rgba(255,255,255,0) 85%);
+          border-radius: 24px;
+        }
+        img{
+          display: block;
+          max-width: 100%;
+          height: auto;
+          border-radius: 25px;
+          border: 1px solid #e9eaec;
+        }
+      }
+      .title-block{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 35px;
+        margin: 0 0 45px 35px;
+        height: auto;
+        z-index: 99;
+        @include tabletS{
+          position: static;
+          margin: 0 0 15px 5px;
+        }
+        h1{
+          color: #363B3E;
+          margin-bottom: 20px;
+          @include tabletS{
+            font: 700 20px/1.2 "Exo 2",sans-serif;
+          }
+        }
+        .info{
+          .date{
+            display: inline-block;
+            margin-right: 10px;
+            a{
+              color: #1a8aff;
+            }
+          }
+          .views{
+            display: inline-block;
+            margin-right: 10px;
+            i{
+              margin-right: 5px;
+            }
+          }
+        }
+
+      }
+    }
+    .blog-post-text{
+      h2{
+        margin-top: 55px;
+        margin-bottom: 30px;
+        font-size: 24px;
+        text-align: left;
+      }
+      h3{
+        margin: 0 0 18px 0;
+        color: #363B3E;
+        text-transform: initial;
+      }
+      ul {
+        padding: 0 0 0 45px;
+        margin-bottom: 30px;
+        list-style: none;
+        li{
+          position: relative;
+          margin-bottom: 15px;
+          font: 400 18px/28px "Exo 2", sans-serif;
+          color: #3b3d41;;
+          &:before{
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 6px;
+            width: 10px;
+            height: 15px;
+            background: url("../img/warranty-returns-i1.png") 0 0 no-repeat;
+          }
+        }
+      }
+      p{
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: justify;
+        img{
+          width: 100%;
+        }
+        a{
+          color: #1a8aff;
+          text-transform: initial;
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+      }
+    }
+    .wp-share-button{
+      margin: 20px 0;
+      .share-button{
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 16px;
+        margin: 5px;
+        max-width: 90px;
+        overflow: hidden;
+        padding: 0 35px;
+        text-decoration: none;
+        background: rgb(213, 213, 213) none repeat scroll 0 0;
+        transition: .35s;
+        &:hover{
+          border-bottom: 4px solid transparent;
+        }
+        .button-icon{
+          display: inline-block;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          width: 20px;
+        }
+        .button-name{
+          display: none;
+        }
+      }
+      .facebook{
+        background: rgb(65, 99, 175) none repeat scroll 0 0;
+        border-bottom: 4px solid rgb(54, 83, 148);
+      }
+      .twitter{
+        background: rgb(85, 172, 238) none repeat scroll 0 0;
+        border-bottom: 4px solid rgb(75, 152, 211);
+      }
+      .google-plus{
+        background: rgb(232, 64, 52) none repeat scroll 0 0;
+        border-bottom: 4px solid rgb(210, 58, 47);
+      }
+    }
+    .wp-share-button-popup{
+      display: none;
+    }
+    .blog-post-psr_bests_of_moment{
+      .PSR_container{
+        margin-bottom: 20px;
+        .PSR_stars{
+          height: 35px;
+          .PSR_votes, .PSR_tvotes{
+            display: inline-block;
+            margin-top: 10px;
+            padding-left: 10px;
+          }
+          .PSR_no_star{
+            font-size: 13px;
+            padding: 0 35px 0 0;
+            width: 32px;
+            height: 32px;
+            background-image: url("../../img/bigstar.png");
+            background-position: center center;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            display: inline-block;
+            text-indent: -9999px;
+            text-align: left;
+            background-repeat: no-repeat;
+            float: left;
+          }
+        }
+      }
+    }
+    .similar-articles{
+      h2{
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      .post-list{
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include tabletS{
+          display: flex;
+          flex-direction: column;
+        }
+        .post-item{
+          flex: 1 1 250px;
+          @include tabletS{
+            margin: 0 auto;
+          }
+          .text{
+            padding: 20px 20px 25px 20px;
+            border: 1px solid #e9eaec;
+            border-radius: 0 0 20px 20px;
+            border-top: none;
+            min-height: 164px;
+            .title{
+              display: block;
+              margin-bottom: 10px;
+              font: 400 20px "Exo 2",sans-serif;
+              color: #3b3d41;
+              text-transform: initial;
+            }
+            .date{
+              margin-bottom: 5px;
+              time{
+                font-family: "Exo 2";
+                font-size: 14px;
+                color: #1a8aff;
+                text-transform: initial;
+              }
+            }
+          }
+          .image{
+            position: relative;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            border: 1px solid #e9eaec;
+            border-bottom: transparent;
+            max-height: 313px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.similar-articles{
+  padding-top: 70px;
+  border-top: 1px solid #e9eaec;
+}

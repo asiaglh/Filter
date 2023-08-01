@@ -1,0 +1,217 @@
+.shares-list-wrap{
+  padding-bottom: 80px;
+  @include tablet{
+    padding-bottom: 40px;
+  }
+  .post-list{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .post-item{
+    flex: 1 1 auto;
+    flex-basis: 47%;
+    margin-bottom: 47px;
+    margin-right: 25px;
+    @include tabletS{
+      flex-basis: 46%;
+    }
+    @include tablet{
+      margin-left: 0!important;
+      margin-right: 0!important;
+      flex-basis: auto;
+      margin-bottom: 20px;
+    }
+    &.ask-closed{
+      opacity: .4;
+    }
+    &:nth-child(2n){
+      margin-right: 0;
+      margin-left: 25px;
+    }
+    .image{
+      &:hover{
+        img{
+          transform: scale(1.1);
+        }
+      }
+      img {
+        @include tabletS{
+          position: absolute;
+        }
+        width: 100%;
+        transition: .45s;
+        height: 100%;
+        object-fit: cover;
+      }
+      position: relative;
+      min-height: 240px;
+      background-color: #eee;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+      border: 1px solid #e9eaec;
+      max-height: 313px;
+
+      a{
+        display: block;
+      }
+      .countdown-timer{
+        position: absolute;
+        bottom: 20px;
+        left: 23px;
+        display: flex;
+        z-index: 99;
+        .timer-block{
+          &:first-child{
+            span {
+              color: #fff;
+            }
+            background-color: #ff5b08;
+          }
+          .digits{
+            font: 600 15px/15px "Exo 2",sans-serif;
+          }
+          position: relative;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          width: 40px;
+          margin-right: 11px;
+          padding: 5px;
+          span {
+            color: #ff5b08;
+          }
+          background-color: #fff;
+          border-radius: 5px
+
+        }
+      }
+    }
+    .text{
+      padding: 20px 20px 25px 20px;
+      border: 1px solid #e9eaec;
+      border-radius: 0 0 20px 20px;
+      border-top: none;
+      min-height: 164px;
+      .date{
+        color: #ff5b1a;
+        margin-bottom: 5px;
+      }
+      a{
+        color: #363B3E;
+        display: block;
+        margin-bottom: 10px;
+        font: 400 20px "Exo 2",sans-serif;
+        text-transform: initial;
+      }
+    }
+  }
+  .text-right{
+    @include tabletS{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.sale-inner{
+  .products_wrap{
+    margin-bottom: 40px;
+  }
+}
+.information-block{
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  @include tabletS{
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-block{
+    display: flex;
+    align-items: center;
+    flex: 1 1 675px;
+    position: relative;
+    margin-right: 50px;
+    max-width: 675px;
+    height: 422px;
+    overflow: hidden;
+    width: 100%;
+    @include tabletS{
+      max-width: 415px;
+      height: auto;
+      margin: 0 0 25px 0;
+      flex-basis: auto;
+    }
+    .image{
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-height: 422px;
+      border-radius: 25px;
+      overflow: hidden;
+      @include tabletS{
+        position: relative;
+      }
+    }
+    img{
+      position: relative;
+      display: block;
+      max-width: 100%;
+    }
+  }
+  .text-block{
+    flex: 1 1;
+    display: block;
+    width: 100%;
+    .title-ask{
+      margin-bottom: 25px;
+      font-family: "Exo 2";
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 38px;
+      @include tabletS{
+        margin-bottom: 10px;
+        font-size: 23px;
+        line-height: 30px;
+      }
+    }
+    .date{
+      color: #ff5b1a;
+    }
+    .countdown-timer{
+      display: flex;
+      margin-top: 25px;
+      .timer-block{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50px;
+        margin-right: 11px;
+        padding: 5px;
+        span {
+          color: #fff;
+        }
+        .digits{
+          font-size: 26px;
+          margin: 0;
+          line-height: 20px;
+        }
+        background-color: #ff5b08;
+        border-radius: 5px
+      }
+    }
+  }
+}
+

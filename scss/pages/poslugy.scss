@@ -1,0 +1,99 @@
+.service{
+  @include tabletS{
+    padding-top: 70px;
+  }
+  h1.page-title{
+    @include tabletS{
+      text-align: left!important;
+    }
+  }
+}
+
+.services{
+  display: flex;
+  margin-top: 25px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  flex-direction: column;
+  .service-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet{
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .services-item{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 240px;
+    width: 100%;
+    max-width: 530px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    @include tablet{
+      margin-right: 0!important;
+      margin-bottom: 10px!important;
+      max-width: 100%;
+      height: auto;
+      min-height: 170px;
+    }
+    @include mobileL{
+      min-height: 120px;
+    }
+    @include mobileL{
+      border-radius: 0;
+    }
+    &:hover{
+      span{
+        padding-left: 60px;
+        @include tablet{
+          padding-left: 40px;
+        }
+        @include mobileL{
+          padding-left: 15px;
+        }
+      }
+    }
+    span{
+      position: relative;
+      display: block;
+      padding: 0 0 0 40px;
+      font: 400 24px/30px "Exo 2",sans-serif;
+      color: #373b3f;
+      transition: padding-left .3s;
+      @include tabletS{
+        text-shadow: 1px 1px 0 #fff;
+      }
+      @include mobileL{
+        padding: 0 0 0 15px;
+        font: 400 20px/22px "Exo 2",sans-serif;
+      }
+    }
+    img{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include tabletS{
+        opacity: .5;
+      }
+    }
+    &.style1{
+      background-image: linear-gradient(to left,#beeeff 0,#8cd9ff 100%);
+    }
+    &.style2{
+      background-image: linear-gradient(to bottom left,#fff8d0 0,#fde97d 100%);
+    }
+    &.style3{
+      background-image: linear-gradient(to left,#e9ffcf 0,#ccfda6 100%);
+    }
+    &:first-child, &:nth-child(3n){
+      margin-right: 50px;
+      width: 100%;
+    }
+  }
+}

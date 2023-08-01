@@ -1,0 +1,373 @@
+.main-page{
+  @include tabletS{
+    .slider-single{
+      display: none;
+    }
+  }
+}
+
+.about-block{
+  display: flex;
+  justify-content: space-between;
+  @include tabletS{
+    flex-direction: column;
+  }
+  .about-item{
+    .list-wrap{
+      display: flex;
+      ul:first-child{
+        margin-right: 50px;
+      }
+    }
+    background-position: right center!important;
+    background-size: contain!important;
+    &:first-child{
+      background: url("../img/i-wanna-drink.jpg") 0 0 no-repeat #84eaff;
+      border-bottom-left-radius: 30px;
+      @include tabletS{
+        border-bottom-left-radius: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+    &:last-child{
+      background: url("../img/serve-filter.jpg") 0 0 no-repeat #ffe8aa;;
+      border-bottom-right-radius: 30px;
+      margin-right: 0;
+      @include tabletS{
+        border-bottom-left-radius: 30px;
+        margin-top: 10px;
+      }
+    }
+    &:nth-child(2){
+      background: url("../img/clear-water.jpg") 0 0 no-repeat #e3ffc4;
+      @include tabletS{
+        margin-right: 0;
+      }
+    }
+    padding: 23px 25px 0;
+    flex: 1; /* розтягує елементи на всю доступну ширину */
+    min-height: 180px;
+    margin-right: 20px;
+    h4{
+      margin-bottom: 13px;
+    }
+    li{
+      margin-bottom: 3px;
+    }
+    .about-link{
+      text-transform: lowercase;
+    }
+  }
+}
+
+.request-call{
+  background: #e2eef5;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+  padding: 20px;
+  margin-bottom: 100px;
+  overflow: hidden;
+  @include tabletS{
+    margin-bottom: 30px;
+  }
+  @include tablet{
+    flex-direction: column;
+  }
+  img{
+    margin: -34px 37px -34px 0;
+    vertical-align: middle;
+    @include tabletS{
+      display: none;
+    }
+  }
+  .title{
+    display: inline-block;
+    vertical-align: top;
+    color: #1a8aff;
+    font: 400 16px/1.4 "PT sans",sans-serif;
+    text-align: left;
+    margin-right: 30px;
+    text-transform: initial;
+    @include tablet{
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    strong{
+      color: #1a8aff;
+      display: block;
+      text-transform: uppercase;
+      font: 700 20px/1.4 "Exo 2",sans-serif;
+    }
+  }
+  form{
+    display: inline-block;
+    vertical-align: top;
+    width: 294px;
+    .input-group{
+      position: relative;
+      display: flex;
+      align-items: center;
+      .input-group-btn{
+        position: relative;
+        font-size: 0;
+        white-space: nowrap;
+        button{
+          background: #fff;
+          border: none;
+          height: 44px;
+          width: 44px;
+          border-radius: 0 50px 50px 0;
+          color: #1a8aff;
+          font-size: 23px;
+          padding-right: 14px;
+          transition: .35s;
+          i:before{
+            color: #1a8aff;
+            margin-left: 8px;
+            transition: .35s;
+          }
+          &:hover{
+            background: #1a8aff;
+            color: #FFFFFF;
+            i:before{
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+      input{
+        height: 44px;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 50px 0 0 50px;
+        font: normal 500 20px/1.4 "Exo 2",sans-serif;
+        color: #1a8aff;
+        padding-left: 14px;
+        outline: none;
+        &::placeholder{
+          color: #1a8aff;
+        }
+      }
+    }
+  }
+}
+
+.seo{
+  .more{
+    padding-top: 5px;
+    display: inline-block;
+  }
+  .text-active{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    overflow: hidden;
+    height: 0px;
+    &.visible {
+      opacity: 1;
+      overflow: visible;
+      height: auto;
+    }
+    ul{
+      list-style-type: disc;
+      padding-left: 40px;
+      margin-bottom: 20px;
+    }
+    h2.small{
+      margin-bottom: 18px;
+      color: var(--light-gray);
+    }
+    h1{
+      margin-bottom: 20px;
+      @include tabletS{
+        font-size: 20px;
+      }
+    }
+  }
+  p, li{
+    line-height: 2.2;
+    color: var(--light-gray);
+    @include tablet{
+      line-height: 20px;
+    }
+  }
+}
+
+.examples{
+  background: #f6f9fb;
+  padding-top: 90px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  @include tabletS{
+    margin-top: 30px;
+  }
+  @include tablet{
+    padding-top: 10px;
+  }
+  .seo{
+    padding-top: 150px;
+    @include tablet{
+      padding-top: 0px;
+    }
+  }
+  .example-sliders-wrap{
+    width: 100%;
+    height: 400px;
+    @include tablet{
+      height: auto;
+    }
+  }
+  .left-slider-wrap, .right-slider-wrap{
+    width: 50%;
+    float: left;
+    @include tablet{
+      width: 100%;
+      float: none;
+    }
+  }
+  .slider-examples-img{
+    .slick-arrow{
+      border-radius: 50%;
+      font-size: 0;
+      width: 60px;
+      height: 60px;
+      border: 1px solid transparent;
+      background: #fff;
+      position: absolute;
+      top: 45%;
+      margin-top: -30px;
+      padding: 20px;
+      z-index: 2;
+      outline: none;
+      svg{
+        path {
+          transition: .35s;
+        }
+      }
+      &:hover{
+        svg{
+          path{
+            fill: #5189ff;
+          }
+        }
+      }
+    }
+    .slick-prev{
+      left: 20px;
+    }
+    .slick-next{
+      right: -30px;
+      @include tablet{
+        right: 20px;
+      }
+    }
+  }
+  .right-side{
+    margin-left: 40px;
+    background: url("../img/examples-slider-bg.png") 0 0 no-repeat;
+    padding: 44px 0 40px 29px;
+    margin-top: -41px;
+    min-height: 630px;
+    position: relative;
+    @include tabletS{
+      min-height: 457px;
+      background-size: 319px;
+      width: auto;
+    }
+    @include tablet{
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 0;
+      padding: 50px 10px 10px;
+    }
+    .pagingInfo{
+      position: absolute;
+      bottom: 50px;
+      left: 110px;
+      font: 400 18px/1.4 "Exo 2",sans-serif;
+      color: #7d848e;
+      @include tabletS{
+        left: 75px;
+        font-size: 14px;
+      }
+      @include tablet{
+        position: static;
+        font-size: 18px;
+      }
+    }
+    a{
+      position: absolute;
+      right: 0;
+      color: #1a8aff;
+      text-transform: initial;
+      @include tablet{
+        position: static;
+        margin: 20px 0 10px;
+      }
+      i{
+        background: url("../img/arrow-right.svg") 0 0 no-repeat;
+        background-size: contain;
+        width: 13px;
+        height: 10px;
+        margin-left: 7px;
+        display: inline-block;
+      }
+    }
+    img{
+      max-width: 100%;
+      height: auto;
+      @include tabletS{
+        max-width: 300px;
+      }
+  }
+    flex: 50%;
+  }
+  .left-side{
+    .content{
+      .ps{
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: .3px;
+        &::before{
+          content: "";
+          display: block;
+          width: 20px;
+          height: 1px;
+          background: #1a8aff;
+          margin: 21px 0 16px;
+        }
+      }
+      p, a{
+        font-size: 16px;
+        line-height: 1.9;
+        color: #373b3f;;
+        @include mobileL{
+          line-height: 1.4;
+        }
+      }
+      a{
+        color: #1a8aff;
+        text-transform: initial;
+      }
+    }
+    h2{
+      text-align: left;
+      margin: 55px 0;
+      @include tabletS{
+        margin: 20px 0;
+      }
+    }
+  }
+}
+

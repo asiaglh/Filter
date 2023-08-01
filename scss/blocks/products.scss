@@ -1,0 +1,643 @@
+
+.products-grid{
+  .request-call{
+    margin: 18px 12px 48px 12px;
+    @include tabletS{
+      display: none;
+    }
+  }
+  @include tabletS{
+    text-align: center;
+  }
+  .product{
+    width: 250px;
+    min-height: 390px;
+    height: 370px;
+    margin: 0 10px 24px 10px;
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: left;
+    @include tabletS{
+      width: 235px;
+      padding: 0 14px 27px!important;
+      margin: 0 5px 10px 5px!important;
+      .btn-add-to-comparison {
+        display: none!important;
+      }
+    }
+    .discontinued{
+      display: none;
+    }
+    .stock-orange{
+      min-height: 35px;
+      overflow: hidden;
+      max-height: 36px;
+    }
+    .characteristics{
+      margin-top: 20px;
+    }
+    &:hover {
+      overflow: visible;
+      border-color: transparent;
+      @include tablet{
+        overflow: hidden!important;
+        border-color: #e5e5e5;
+      }
+      .inner{
+        display: block;
+        padding: 5px 23px 27px 23px;
+        position: absolute;
+        left: -6px;
+        right: -6px;
+        top: -6px;
+        border: 1px solid #1a8aff;
+        border-radius: 20px;
+        -webkit-box-shadow: 0 0 31px 2px #e5e5e5;
+        box-shadow: 0 0 31px 2px #e5e5e5;
+        background: #fff;
+        z-index: 3;
+      }
+    }
+    .title{
+      min-height: 65px;
+    }
+  }
+  nav{
+    width: 100%;
+    display: block;
+    padding: 0 7px 0 0;
+    margin-bottom: 40px;
+    .pagination{
+      margin-top: -35px;
+    }
+  }
+  .center-more-wrap{
+    width: 100%;
+    text-align: left;
+    margin-top: 40px;
+    .btn-more{
+      display: inline-block;
+      margin: -70px 0 0 11px;
+      position: relative;
+      color: #373b3f;
+      font: 500 14px/1.1 "Exo 2",sans-serif;
+      letter-spacing: .3px;
+      padding: 14px 25px;
+      border: 1px solid #1a8aff;
+      border-radius: 30px;
+      text-transform: uppercase;
+      span{
+        text-transform: uppercase;
+        color: #7d848e;
+        font: 500 14px/1.1 "Exo 2",sans-serif;
+      }
+    }
+  }
+}
+
+.catalog-grid{
+  @include tablet{
+    text-align: center;
+  }
+  .request-call {
+    margin: 0 12px 24px 12px;
+    width: auto;
+    @include tabletS{
+      display: none;
+    }
+  }
+  .product{
+    min-height: 380px;
+    overflow: hidden;
+    width: 250px;
+    margin: 0 0 24px 10px;
+    text-align: left;
+    @include tabletS{
+      width: 235px;
+      padding: 0 14px 27px;
+      margin: 0 0 5px 2px;
+    }
+    @include mobileL{
+      margin: 0 0 5px 0;
+      width: 49%;
+      min-height: 355px!important;
+      height: auto;
+      padding: 0 10px 20px!important;
+      .price {
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+    .price .old-price {
+      font-weight: 700;
+      display: block!important;
+      font-size: 14px;
+      margin-top: -15px!important;
+    }
+    .clearfix{
+      .title {
+        min-height: 65px;
+      }
+      .stock.stock-orange {
+        min-height: 35px;
+        overflow: hidden;
+      }
+    }
+    .characteristics{
+      display: none;
+    }
+    &:hover{
+      overflow: visible;
+      border-color: transparent;
+      @include tablet{
+        overflow: hidden;
+        border-color: #e5e5e5;;
+      }
+      .inner{
+        padding: 5px 23px 27px 23px;
+        position: absolute;
+        left: -6px;
+        right: -6px;
+        top: -6px;
+        border: 1px solid #1a8aff;
+        border-radius: 20px;
+        box-shadow: 0 0 31px 2px #e5e5e5;
+        background: #fff;
+        z-index: 3;
+        @include tablet{
+          padding: 5px 13px 25px 13px;
+        }
+      }
+      .characteristics{
+        display: block;
+      }
+    }
+  }
+}
+
+.products_wpap{
+  .title{
+    margin-bottom: 25px;
+    font-family: "Exo 2";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .catalog-grid {
+    display: flex;
+    justify-content: center;
+  }
+  .product{
+    width: 255px;
+    min-width: 255px;
+    min-height: 372px;
+    height: 375px;
+    margin: 0 5px 24px 12px;
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: left;
+    .title{
+      min-height: 55px;
+      height: auto;
+    }
+    .characteristics{
+      margin-top: 10px;
+    }
+  }
+}
+
+.product{
+  padding: 0 22px 27px;
+  max-width: 246px;
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  .image{
+    width: 200px;
+    height: 200px;
+    @include tabletS{
+      width: 100%;
+      height: auto;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &.banner{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .title {
+      font: 700 20px/1.4 "Exo 2",sans-serif;
+      color: #1a8aff;
+      text-transform: uppercase;
+      height: auto;
+    }
+  }
+  &:hover{
+    .title{
+      color: #1a8aff;
+    }
+  }
+  .inner{
+    .stock.stock-orange {
+      color: #ff7337;
+    }
+    .title{
+      font-family: "PT Sans";
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: initial;
+      margin-top: 10px;
+      height: 38px;
+      overflow: hidden;
+      color: #363B3E;
+      transition: .35s;
+    }
+    .more{
+      position: relative;
+      color: #1a8aff;
+      display: inline;
+      border-bottom: 1px solid transparent;
+      text-transform: initial;
+      transition: .35s;
+      .icon-arrow-right{
+        background: url("../../img/arrow-right.svg") 0 0 no-repeat;
+        background-size: contain;
+        width: 13px;
+        height: 10px;
+        margin-left: 7px;
+        position: absolute;
+        top: 60%;
+        left: 100%;
+        font-size: 15px;
+        -webkit-transform: translate3d(0,-50%,0);
+        transform: translate3d(0,-50%,0);
+      }
+      &:hover{
+        border-bottom: 1px solid #1a8aff;
+      }
+    }
+    .price, .price span{
+      margin: 10px 4px 10px 0;
+      font-family: "Exo 2";
+      font-weight: 500;
+      font-size: 20px;
+      color: #373b3f;
+      .old-price{
+        text-decoration: line-through;
+        color: #bbb;
+      }
+    }
+    .review{
+      margin-top: 2px;
+      font-size: 13px;
+      color: #373b3f;
+      border-bottom: 1px solid rgba(55,59,63,.5);
+      text-transform: initial;
+      transition: .35s;
+      &:hover{
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}
+
+.product.ga4{
+  display: block;
+  width: 100%;
+  max-width: none;
+  min-height: 200px;
+  height: 200px;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+}
+
+.products-row .product {
+  margin: 0 0 24px 0;
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  text-align: left;
+  .inner {
+    padding-top: 20px;
+  }
+  .mid-rating {
+    margin-left: 0;
+  }
+  .country{
+    margin: 0 0 10px;
+  }
+  .characteristics {
+    display: none;
+    margin-top: 15px;
+    font-size: 13px;
+  }
+  .buy-and-compare-block{
+    display: flex;
+    align-items: center;
+  }
+  .btn-add-to-comparison {
+    width: 36px;
+    height: 21px;
+    margin-left: 10px;
+  }
+  .price {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 28px;
+    .old-price {
+      font-weight: 700;
+      display: block;
+      font-size: 20px;
+      margin-top: -10px;
+      margin-bottom: 0;
+    }
+  }
+  .stock {
+    font-size: 14px;
+    line-height: 1.1;
+    height: 32px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+  }
+  .img-wrap {
+    .image{
+      display: flex;
+      align-items: center;
+      img {
+        max-height: 170px;
+        width: auto;
+        transition: all 0s;
+      }
+    }
+  }
+  .info-wrap{
+    width: 48%;
+  }
+   &:hover {
+    overflow: visible;
+    border-color: transparent;
+     .characteristics {
+       display: block;
+     }
+     .inner {
+       display: block;
+       padding: 25px 23px 27px 23px;
+       position: absolute;
+       left: -6px;
+       right: -6px;
+       top: -6px;
+       border: 1px solid #1a8aff;
+       border-radius: 20px;
+       -webkit-box-shadow: 0 0 31px 2px #e5e5e5;
+       box-shadow: 0 0 31px 2px #e5e5e5;
+       background: #fff;
+       z-index: 3;
+     }
+  }
+  .btns-wrap{
+    padding: 0 15px;
+  }
+  &.banner {
+    display: block;
+    padding-top: 50px;
+    padding-left: 76px;
+    width: 100%;
+    height: 200px;
+    max-width: none;
+  }
+}
+
+.sale-inner{
+  .product {
+    min-height: 370px !important;
+  }
+}
+
+.sale-inner, .col-2, .tab-pane, .catalog-grid{
+  .product {
+    display: inline-block;
+    padding: 0 22px 27px;
+    color: #373b3f;
+    position: relative;
+    min-height: 390px;
+    max-height: 390px;
+    border-radius: 20px;
+    border: 1px solid #e5e5e5;
+    vertical-align: top;
+    transition: .35s;
+    .stock-orange{
+      min-height: 20px;
+      overflow: hidden;
+      max-height: 36px;
+    }
+    &.product-small{
+      border-radius: 0;
+      min-height: 400px;
+      padding-bottom: 2px;
+      position: relative;
+      .btn-buy.active {
+        border-color: #7d8492;
+        color: #7d8492;
+        cursor: default;
+      }
+      .btn-buy {
+        font-size: 13px;
+        color: #1a8aff;
+        padding: 9px 10px 10px;
+        border: 1px solid #1a8aff;
+        transition: all .3s linear;
+        border-radius: 30px;
+        text-transform: uppercase;
+      }
+      .more{
+        margin-top: 15px;
+      }
+      &:hover{
+        box-shadow: none;
+        border: 1px solid #e5e5e5;
+        .title{
+          color: #1a8aff;
+        }
+      }
+      .price{
+        .old-price{
+          display: block;
+          font-size: 12px;
+          font-weight: 700;
+          margin-top: 5px;
+          margin-bottom: -5px;
+        }
+      }
+      &.active{
+        .content{
+          display: block;
+        }
+      }
+      .content{
+        display: none;
+        background: rgba(234,242,248,.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #fff;
+        padding: 30px 24px 30px;
+        z-index: 2;
+        line-height: 1.45;
+        .btn-remove{
+          width: 15px;
+          height: 15px;
+          top: 14px;
+          right: 8px;
+          border-radius: 50%;
+          position: absolute;
+          z-index: 5;
+          &:before, &:after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #1a8aff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            transform: rotate(45deg);
+          }
+          &:after{
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    &.banner{
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 26px;
+      .title{
+        font: 700 20px/1.4 "Exo 2",sans-serif;
+        color: #1a8aff;
+        text-transform: uppercase;
+        height: auto;
+      }
+    }
+    .sale-block-sticker{
+      background: #ff5b1a!important;
+    }
+    .stock-orange{
+      color: #ff7337;
+    }
+    .label{
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #8bd52e;
+      padding: 5px 8px;
+      border-radius: 8px;
+      font: 700 16px/1.2 "Exo 2",sans-serif;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    &:hover {
+      height: auto;
+      border: 1px solid #1a8aff;
+      box-shadow: 0px 0px 43px -27px rgba(0, 0, 0, 1);
+      @include tablet{
+        border: 1px solid #e5e5e5;
+        box-shadow: none;
+      }
+    }
+    .buy-and-compare-block {
+      display: inline-block;
+      margin-left: 0;
+      vertical-align: super;
+
+      .btn-buy {
+        padding: 8px;
+        margin-right: 7px;
+        display: inline-block;
+        @include tablet{
+          margin-right: 0;
+        }
+      }
+      .btn-add-to-comparison {
+        display: inline-block;
+        vertical-align: middle;
+        @include tabletS{
+          display: none;
+        }
+      }
+    }
+    .price {
+      margin: 10px 4px 10px 0;
+      font-weight: 500;
+      font-size: 20px;
+      font-family: "Exo 2";
+      line-height: 1;
+      display: inline-block;
+      text-align: left;
+      @include tablet{
+        font-size: 16px;
+      }
+      .currency{
+        font: 400 14px/1.4 "PT sans",sans-serif!important;
+      }
+      .old-price{
+        font-weight: 700!important;
+        display: block;
+        font-size: 14px!important;
+        margin: -6px 0 0 0;
+        color: #bbb;
+      }
+    }
+    .title {
+      height: 38px;
+      overflow: hidden;
+      line-height: 1.4;
+      margin: 0;
+      transition: .35s;
+    }
+    .characteristics {
+      margin-top: 20px;
+      @include mobileL{
+        display: none;
+      }
+      .text-gray {
+        font-weight: 700;
+      }
+    }
+    .discontinued{
+     display: none;
+   }
+    .image {
+      overflow: hidden;
+      margin-bottom: 2px;
+      text-align: center;
+      max-height: 211px;
+      img {
+        transition: all .3s linear;
+        margin: 0 auto;
+        width: 100%;
+        object-fit: contain;
+        max-height: 200px;
+      }
+    }
+  }
+}
+

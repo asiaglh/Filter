@@ -1,0 +1,156 @@
+.our-history{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  @include tabletS{
+    margin-bottom: 30px;
+  }
+  p{
+    font-family: "Exo 2";
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #373b3f;
+    margin-bottom: 10px;
+  }
+  strong{
+    font-weight: 700;
+  }
+  .article_h6{
+    margin: 40px 0 20px 0;
+  }
+  ul {
+    padding: 15px 0px 5px 45px;
+    list-style: none;
+    li{
+      position: relative;
+      margin-bottom: 15px;
+      font: 400 15px/1.5 "Exo 2", sans-serif;
+      &:before{
+        content: '';
+        position: absolute;
+        left: -28px;
+        top: 6px;
+        width: 10px;
+        height: 15px;
+        background: url("../img/warranty-returns-i1.png") 0 0 no-repeat;
+      }
+    }
+  }
+  table{
+    border-collapse: separate !important;
+    border-spacing: 0;
+    width:  100%;
+    max-width: 890px;
+    border-radius: 25px;
+    margin: 40px auto 40px auto;
+    border: solid #c9d8e4 1px;
+    td{
+      &:first-child{
+        border-left: none;
+      }
+      height: 111px;
+      font: 400 15px/1.5 "Exo 2", sans-serif;
+      border-top: 1px solid #c9d8e4;
+      border-left: 1px solid #c9d8e4;
+      padding: 10px;
+      text-align: center;
+    }
+    th{
+      background-color: #e4edf4;
+      border-top: none;
+      height: 100px;
+      .article_h6{
+        margin: 0;
+      }
+      &:first-child{
+        border-radius: 25px 0 0 0;
+      }
+      &:last-child{
+        border-radius: 0 25px 0 0;
+        border-left: 1px solid #c9d8e4;
+      }
+    }
+  }
+}
+
+.phone_send_form_1{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  margin-top: 40px;
+  padding: 54px 50px 54px 50px;
+  background-color: #e4edf4;
+  border-radius: 25px;
+  @include tabletS{
+    margin: 0 auto 40px auto;
+    flex-direction: column!important;
+  }
+  @include tablet{
+    max-width: 400px;
+  }
+  .text{
+    margin-right: 50px;
+    color: #5189ff;
+    @include tabletS{
+      margin-right: 0;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .text-1{
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #5189ff;
+      text-transform: uppercase;
+      @include tabletS{
+        margin-bottom: 5px;
+      }
+    }
+    .text-2{
+      color: #5189ff;
+    }
+  }
+  form{
+    flex: 1;
+    display: flex;
+    @include tabletS{
+      align-items: center;
+      justify-content: center;
+    }
+    @include tablet{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    button{
+      width: 190px;
+      min-width: 190px;
+      letter-spacing: 1px;
+      @include tabletS{
+        width: auto;
+        white-space: nowrap;
+        margin-right: 0;
+      }
+    }
+    input{
+      padding: 13px 25px;
+      margin-right: 17px;
+      width: 100%;
+      max-width: 290px;
+      font: 400 14px/18px "PT sans",sans-serif;
+      color: #7e838c;
+      border: 0;
+      border-radius: 25px;
+      outline: 0;
+      @include tabletS{
+        width: 100%;
+       margin-bottom: 0;
+        margin-right: 0;
+      }
+      @include tablet{
+        width: 240px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

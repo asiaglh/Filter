@@ -1,0 +1,70 @@
+$k2: 2560px;
+$desktop: 1921px;
+$laptopL: 1681px;
+$laptop:  1440px;
+$tabletL: 1200px;
+$tabletM: 1024px;
+$tabletS: 992px;
+$tablet: 768px;
+$tabletXS: 625px;
+$mobileL: 530px;
+$mobileM: 414px;
+$mobileS: 360px;
+
+@mixin mobileL{
+  @media (max-width: $mobileL){
+    @content
+  }
+}
+
+
+@mixin mobile{
+  @media (max-width: $mobileM){
+    @content
+  }
+}
+
+@mixin tabletL{
+  @media (max-width: $tabletL){
+    @content
+  }
+}
+
+@mixin tabletM{
+  @media (max-width: $tabletM){
+    @content
+  }
+}
+
+
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content
+  }
+}
+
+@mixin tabletS{
+  @media (max-width: $tabletS){
+    @content
+  }
+}
+
+@mixin tabletXS{
+  @media (max-width: $tabletXS){
+    @content
+  }
+}
+
+@mixin laptop{
+  @media (max-width: $laptop){
+    @content
+  }
+}
+
+// colors
+:root{
+  --gray: #373b3f;
+  --light-gray: #7d848e;
+  --blue-1:#1a8aff;
+  --gray: #393536;
+}

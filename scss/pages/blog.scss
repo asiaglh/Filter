@@ -1,0 +1,92 @@
+.blog{
+  padding-top: 50px;
+  @include tabletS{
+    padding-top: 130px;
+  }
+  .page-title{
+    text-transform: initial;
+    font-size: 32px;
+    @include tabletS{
+      font: 700 20px/1.2 "Exo 2",sans-serif;
+      text-align: left;
+    }
+  }
+  .post-list-wrap{
+    padding-bottom: 80px;
+  }
+  .post-list{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 25px;
+    margin-bottom: 30px;
+    @include tabletS{
+      grid-template-columns: repeat(1, auto);
+
+    }
+  }
+  .post-item{
+    @include tabletS{
+      max-width: 580px;
+      margin: 0 auto;
+    }
+    &:hover{
+      .image{
+        img{
+          transform: scale(1.1);
+        }
+      }
+    }
+    .image{
+      position: relative;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+      border: 1px solid #e9eaec;
+      border-bottom: transparent;
+      max-height: 313px;
+      min-height: 313px;
+      height: auto;
+      a{
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+      }
+      img{
+        transition: .35s;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .text{
+      padding: 20px 20px 25px 20px;
+      border: 1px solid #e9eaec;
+      border-radius: 0 0 20px 20px;
+      border-top: none;
+      min-height: 164px;
+      .date{
+        margin-bottom: 5px;
+        time{
+          color: #1a8aff;
+          font: 400 14px "PT sans",sans-serif;
+        }
+      }
+      .title{
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 20px;
+        text-transform: initial;
+        font-family: "Exo 2";
+        color: #3b3d41;
+      }
+    }
+  }
+  .text-right{
+    @include tabletS{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

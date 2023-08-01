@@ -1,0 +1,221 @@
+.menuSearch{
+  height: 100%;
+  display: flex;
+  min-height: 53px;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  .search_close{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    height: 20px;
+    width: 30px;
+    color: #8b8b8b;
+    font-size: 20px;
+    transition: transform .5s,-webkit-transform .5s;
+    cursor: pointer;
+    &:hover{
+      transform: rotate(180deg) translateX(10px) translateY(-7px);
+    }
+    .fa{
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+
+    }
+    .fa-times:before{
+      content: "\2716";
+    }
+  }
+  button{
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+      background: url("../../img/search.svg") 0 0 no-repeat;
+      display: inline-block;
+      width: 15px!important;
+      height: 15px!important;
+    }
+  }
+  .searchinput{
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-family: "Exo 2";
+    font-size: 14px;
+    font-weight: 500;
+    top: 0;
+    padding: 15px 15px 15px 15px;
+  }
+}
+.menuShow{
+  z-index: 9999;
+  top: 51px;
+  position: absolute;
+  background: #ffffff;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 45px 75px rgba(164,164,164,.35);
+  min-height: 422px;
+  display: block;
+  .menuShow-item{
+    padding: 25px 0;
+    display: flex;
+    h4{
+      a{
+        font-family: "Exo 2";
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #373b3f;
+        transition: .35s;
+        &:hover{
+         color: #5189ff;
+        }
+      }
+      padding-bottom: 15px;
+      display: inline-block;
+    }
+    ul{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      li>.after-top:after {
+        content: "ТОП";
+        display: inline-block;
+        margin-left: 5px;
+        padding: 0 4px 0 4px;
+        font: 400 12px/18px "PT sans",sans-serif;
+        color: #fff;
+        background-color: red;
+        border-radius: 5px;
+      }
+      li{
+        margin-bottom: 8px;
+        a{
+          padding: 0;
+          font-family: "PT Sans";
+          font-size: 15px;
+          font-weight: 400;
+          color: #7e838c;
+          text-transform: initial;
+        }
+      }
+    }
+  }
+  .left-side{
+     display: flex;
+     .col-1{
+       display: flex;
+       flex-direction: column;
+       margin-right: 60px;
+     }
+    .col-3{
+      margin-left: 60px;
+    }
+  }
+  .right-side{
+    display: flex;
+   &.noBorder{
+     border: none;
+   }
+    &-body{
+      position: relative;
+      width: 100%;
+      .orange-bg{
+        top: 50px;
+        left: 30px;
+        z-index: 4;
+      }
+      h3{
+        position: absolute;
+        top: 100px;
+        left: 30px;
+        z-index: 4;
+        max-width: 300px;
+      }
+      button{
+        position: absolute;
+        top: 180px;
+        left: 30px;
+        z-index: 3;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        max-width: 500px;
+        max-height: 370px;
+        border-bottom-right-radius: 30px;
+        object-fit: cover;
+      }
+    }
+    .col-2{
+      flex: 50%;
+      max-width: 400px;
+      border-bottom-right-radius: 30px;
+      position: relative;
+      .orange-bg{
+        top: 30px;
+        left: 70px;
+      }
+      img {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        border-bottom-right-radius: 30px;
+      }
+    }
+    padding-left: 30px;
+    margin-left: 80px;
+    border-left: 1px solid #e9e9e9;
+    .col-1{
+      flex: 50%;
+      display: flex;
+      flex-direction: column;
+      max-width: 200px;
+      img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      .product-info{
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        p{
+          font-size: 14px;
+        }
+        .price{
+          margin-top: 5px;
+          font-family: "Exo 2";
+          font-weight: 500;
+          font-size: 22px;
+          text-transform: uppercase;
+        }
+        a{
+          margin-top: 10px;
+          display: inline-block;
+          color: #5189ff;
+          text-transform: initial;
+        }
+      }
+    }
+  }
+}
+
+.orange-bg{
+  position: absolute;
+  background: #ff7337;
+  text-transform: lowercase;
+  color: #FFFFFF;
+  padding: 1px 5px;
+  border-radius: 3px;
+}

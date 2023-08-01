@@ -1,0 +1,539 @@
+.header-shop-cart{
+  width: 100%;
+  border-bottom: 1px solid #C2C2C2;
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include tabletS{
+    min-height: 74px;
+  }
+  .header-shop-cart-body{
+    max-width: 1280px;
+    padding: 0 12px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+    display: block;
+    width: 251px;
+    @include tabletS{
+      position: relative;
+      top: -6px;
+      width: 145px;
+    }
+    img {
+      display: block;
+      @include tabletS{
+        max-width: 100%;
+      }
+    }
+  }
+  .header_phone {
+    position: relative;
+    top: 7px;
+    text-decoration: none;
+    @include tabletS{
+      top: 0;
+    }
+  }
+  .header_phone__phone {
+    margin-bottom: 6px;
+    font: 300 28px/28px "Exo 2", sans-serif;
+    color: #3B3D41;
+    @include tabletS{
+      font: 600 18px/18px "Exo 2", sans-serif;
+    }
+  }
+  .header_phone__text {
+    font: 400 14px/14px "PT Sans", sans-serif;
+    color: #AFB3B7;
+    @include tabletS{
+      font: 400 12px/12px "PT Sans", sans-serif;
+    }
+  }
+}
+
+.shop-cart{
+  padding: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  .checkout{
+    font: 400 16px/16px "PT Sans", sans-serif;
+    color: #3B3D41;
+    padding: 90px 12px;
+    @include tabletS{
+      padding-top: 30px;
+      padding-bottom: 0;
+    }
+  }
+  .small_text {
+    font: 400 12px/1.25 "PT Sans", sans-serif;
+    color: #9BA2AC;
+  }
+  .title {
+    position: relative;
+    font: 300 28px/28px "Exo 2", sans-serif;
+    color: #3B3D41;
+    @include tabletS{
+      font: 600 26px/26px "Exo 2", sans-serif;
+    }
+  }
+  .hasErrorText {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+  .shop-cart-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 100%;
+    max-width: 1280px;
+    @include tabletS{
+      flex-direction: column-reverse;
+    }
+    .cart_side {
+      flex: 1;
+      max-width: 613px;
+      @include tabletS{
+        position: relative;
+        max-width: 100%;
+        z-index: 1;
+        background: #fff;
+        padding-top: 30px;
+      }
+    }
+    .data_side {
+      flex: 1;
+    }
+  }
+
+  .cart_side__inner {
+    margin-right: 63px;
+    @include tabletS{
+      margin-right: 0;
+    }
+    .cart_products_list{
+      @include tabletS{
+        margin-left: -22px;
+        margin-right: -22px;
+      }
+    }
+    .confirm_section{
+      display: none;
+      @include tabletS{
+        display: block;
+      }
+    }
+    .cart_product_item {
+      position: relative;
+      border-radius: 20px;
+      display: flex;
+      padding: 30px;
+      width: 100%;
+      min-height: 170px;
+      background: #E8F0F7;
+      border-bottom: 1px solid #fff;
+      .cart_product_item__close {
+        top: 18px;
+        right: 18px;
+        border: none;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        cursor: pointer;
+        transform: translate3d(0,0,0);
+        width: 15px;
+        height: 15px;
+        outline: 0;
+        &:before, &:after{
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px;
+          background: #7d848e;
+          transform: rotate(45deg);
+        }
+        &:after{
+          transform: rotate(-45deg);
+        }
+      }
+      .cart_product_item__image {
+        margin-right: 30px;
+        width: 110px;
+        height: 110px;
+        overflow: hidden;
+        border-radius: 10px;
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      .cart_product_item__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        line-height: 16px;
+      }
+      .cart_product_item__name {
+        max-width: 230px;
+        a {
+          font: 400 16px/1.1em "PT Sans", sans-serif;
+          text-decoration: none;
+          color: #3B3D41;
+        }
+      }
+      .cart_product_item__code {
+        margin-top: 8px;
+        font: 400 14px/14px "PT Sans", sans-serif;
+        color: #7E838C;
+      }
+      .cart_product_item__count_price {
+        display: flex;
+        align-items: flex-end;
+        margin-top: auto;
+      }
+      .increment {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        .increment__minus {
+          width: 20px;
+          height: 20px;
+          background: url("../img/minus.svg") center center no-repeat;
+          cursor: pointer;
+        }
+        .increment__input {
+          margin: 0 5px;
+          width: 20px;
+          height: 20px;
+          font: 400 16px/20px "Exo 2", sans-serif;
+          color: #3B3D41;
+          text-align: center;
+          border: 1px solid #7E838C;
+          border-radius: 5px;
+          background-color: transparent;
+        }
+        .increment__plus {
+          width: 20px;
+          height: 20px;
+          background: url("../img/plus.svg") center center no-repeat;
+          cursor: pointer;
+        }
+      }
+    }
+    .price__current {
+      font: 600 24px/24px "Exo 2", sans-serif;
+      color: #3B3D41;
+      .price__sign {
+        display: inline-block;
+        font: 400 16px/16px "PT Sans", sans-serif;
+      }
+    }
+    .calculate {
+      padding: 40px 0;
+      .calculate__row {
+        display: -ms-flexbox;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        padding-right: 30px;
+        .total{
+          font: 600 24px/24px "Exo 2", sans-serif;
+          color: #3B3D41;
+        }
+        .calculate__promocode {
+          position: relative;
+          max-width: 140px;
+
+        }
+      }
+    }
+    .add_more {
+      margin-top: 51px;
+      margin-bottom: 50px;
+    }
+    .add_more__slide_inner{
+      display: flex;
+      flex-direction: column;
+      padding: 20px 15px;
+      min-height: 334px;
+      .add_more__item_image {
+        align-self: center;
+        margin-bottom: 10px;
+        width: 110px;
+        height: 110px;
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      .add_more__item_name {
+        margin-bottom: 15px;
+        font: 400 14px/1.1 "PT Sans", sans-serif;
+      }
+      .add_more__item_code {
+        font: 400 14px/14px "PT Sans", sans-serif;
+        color: #7E838C;
+      }
+      .add_more__count_price {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: auto;
+        margin-bottom: 15px;
+        .info_icon {
+          position: relative;
+          display: block;
+          width: 14px;
+          height: 14px;
+          background: url("../img/info_icon.svg") center center/14px no-repeat;
+          cursor: pointer;
+        }
+        .info_icon__tooltip {
+          position: absolute;
+          display: none;
+          align-items: center;
+          padding: 4px;
+          bottom: 23px;
+          left: -20px;
+          width: 130px;
+          min-height: 42px;
+          background: #1B8AFF;
+          border-radius: 5px;
+          font: 400 12px/12px "PT Sans", sans-serif;
+          color: #fff;
+          text-align: center;
+        }
+        .info_icon__tooltip.v2 {
+          padding: 10px 15px;
+          width: 200px;
+        }
+      }
+      .button--add {
+        height: 35px;
+        border: 1px solid #1B8AFF;
+        border-radius: 20px;
+        background: #fff;
+        min-width: 0;
+        padding: 0 12px;
+        font: 300 13px/13px "Exo 2", sans-serif;
+        color: #1B8AFF;
+        align-self: center;
+      }
+    }
+  }
+  .data_side__inner {
+    position: relative;
+    margin-left: 55px;
+    @include tabletS{
+      margin-left: 38px;
+      margin-right: 18px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -49px;
+      width: 1px;
+      height: 50000px;
+      background: #D2D2D2;
+      @include tabletS{
+        left: -30px;
+      }
+    }
+    .data_side__section {
+      margin-bottom: 50px;
+      @include tablet{
+        margin-bottom: 30px;
+      }
+      .data_side__section_row--contacts_1,
+      .data_side__section_row--contacts_2{
+        @include tabletS{
+          margin-bottom: 10px;
+          flex-direction: column;
+        }
+      }
+      .data_side__section_row--contacts_1 > * {
+        margin-right: 25px;
+        @include tabletS{
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+      }
+      .data_side__section_row--contacts_1 > *:last-child {
+        margin-right: 0;
+      }
+      .data_side__section_row--contacts_2 > * {
+        flex: 0.33333333333;
+        margin-right: 25px;
+        @include tabletS{
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+      }
+      .data_side__section_row--contacts_2 > *:nth-child(2) {
+        flex: 0.52;
+      }
+      .data_side__section_row--delivery_1 > *:nth-child(1) {
+        width: auto;
+      }
+      .controls_group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .radio_button--mb10 {
+          margin-bottom: 10px;
+        }
+        .radio_button [type="radio"]:checked ~ .radio_button__icon {
+          border: 7px solid #1B8AFF;
+          background: #fff;
+        }
+        .radio_button {
+          display: flex;
+          align-items: center;
+        }
+        .radio_button [type="radio"] {
+          display: none;
+        }
+        .radio_button__icon {
+          display: inline-block;
+          margin-right: 15px;
+          width: 20px;
+          height: 20px;
+          background: #E3E5E7;
+          border-radius: 50%;
+          cursor: pointer;
+          @include tabletS{
+            width: 25px;
+            height: 25px;
+          }
+        }
+        .radio_button__text {
+          flex: 1;
+          display: inline-block;
+          font: 400 14px/14px "PT Sans", sans-serif;
+          cursor: pointer;
+          @include tabletS{
+            font: 400 16px/16px "PT Sans", sans-serif;
+          }
+        }
+      }
+      .data_side__section_row {
+        display: flex;
+        margin-bottom: 20px;
+        font-size: 0;
+      }
+    }
+    .title--point:before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: -55px;
+      width: 13px;
+      height: 13px;
+      background: #FF5B1A;
+      border-radius: 50%;
+      @include tabletS{
+        left: -35px;
+      }
+    }
+    .confirm_section{
+      @include tabletS{
+        display: none;
+      }
+    }
+  }
+}
+
+.checkbox_input [type="checkbox"] {
+  display: none;
+}
+.checkbox_input [type="checkbox"]:checked ~ .checkbox_input__icon {
+  background: #1B8AFF url("../img/check_icon.svg") center center no-repeat;
+}
+.checkbox_input {
+  display: flex;
+  align-items: center;
+  .checkbox_input__icon {
+    display: inline-block;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    background: #E3E5E7;
+    border-radius: 5px;
+    cursor: pointer;
+    @include tabletS{
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .checkbox_input__text {
+    flex: 1;
+    display: inline-block;
+    font: 400 14px/14px "PT Sans", sans-serif;
+    cursor: pointer;
+    @include tabletS{
+      font: 400 16px/16px "PT Sans", sans-serif;
+    }
+  }
+}
+
+.controls_group--mb30 {
+  margin-bottom: 30px;
+}
+
+.small_text--mb40 {
+  margin-bottom: 40px;
+}
+
+.title--mb20 {
+  margin-bottom: 20px;
+}
+
+.title--mb35 {
+  margin-bottom: 35px;
+}
+
+.form_element {
+  width: 100%;
+}
+
+.form_element__input {
+  padding: 0 15px;
+  height: 35px;
+  width: 100%;
+  border: 1px solid #D2D2D2;
+  border-radius: 5px;
+  font: 400 16px/35px "PT Sans", sans-serif;
+  color: #3B3D41;
+  outline-color: #1B8AFF;
+  @include tabletS{
+    height: 40px;
+    font: 400 18px/40px "PT Sans", sans-serif;
+  }
+  &.hasError{
+    border: 1px solid #ff0000;
+  }
+}
+
+.form_element__label {
+  display: block;
+  margin-left: 2px;
+  margin-bottom: 5px;
+  font: 400 14px/14px "PT Sans", sans-serif;
+  color: #7E838C;
+}

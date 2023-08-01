@@ -1,0 +1,87 @@
+.search{
+  .product{
+    margin: 0 0 24px 20px!important;
+    @include tabletS{
+      margin: 0 0 20px 10px!important;
+    }
+    @include mobileL{
+      margin: 0 0 10px 0px!important
+    }
+  }
+  @include tabletL{
+    .request-call{
+      display: none;
+    }
+  }
+  .search_page_form{
+    margin-left: 0;
+    margin-bottom: 40px;
+    max-width: 1061px;
+    form{
+      display: flex;
+      height: 53px;
+      border: 1px solid #eaeaea;
+      border-radius: 22px;
+      overflow: hidden;
+      input{
+        flex: 1;
+        padding: 0 25px;
+        border: none;
+        border-radius: 22px;
+        outline: 0;
+        font-family: "PT Sans";
+        font-style: italic;
+      }
+      .icon-search{
+        position: relative;
+        width: 15px;
+        height: 15px;
+        background: url("../img/search.svg") 0 0 no-repeat;
+        transition: all .3s linear;
+      }
+      button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 146px;
+        border: none;
+        background: #ecf4f8;
+        transition: all .3s;
+        span{
+          text-transform: uppercase;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .catalog-grid-wrap{
+    padding-bottom: 70px;
+    @include tablet{
+      padding-bottom: 30px;
+    }
+    .text-right{
+      @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .pagination{
+      margin-top: -40px;
+      @include tablet{
+        margin-top: -150px;
+      }
+    }
+    .btn-more{
+      @include tablet {
+        margin: 80px auto 0;
+        display: block;
+      }
+    }
+  }
+  .seo-table-price{
+    @include tabletS{
+      margin-top: 30px;
+    }
+  }
+}

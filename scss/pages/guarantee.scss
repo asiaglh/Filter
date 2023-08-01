@@ -1,0 +1,83 @@
+.info-items{
+  display: flex;
+  margin-bottom: 120px;
+  margin-top: 60px;
+  @include tablet{
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .warranty_item{
+    position: relative;
+    margin-right: 40px;
+    padding: 30px;
+    max-width: 510px;
+    border: 1px solid #e8e8e8;
+    border-radius: 18px;
+    flex: 1;
+    transition: .35s;
+    @include tablet{
+      margin: 0 0 40px 0;
+      max-width: 400px;
+      text-align: center;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      box-shadow: 0px 0px 18px -10px rgba(0,0,0,0.75);
+    }
+    img{
+      position: absolute;
+      top: -29px;
+      left: 35px;
+      background-color: #fff;
+      @include tablet{
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .title{
+      font: 400 24px "Exo 2",sans-serif;
+      color: #3b3d41;
+      text-transform: initial;
+      text-align: left;
+      margin-bottom: 18px;
+      @include tablet{
+        text-align: center;
+      }
+    }
+    .text{
+      text-transform: initial;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    strong {
+      font-weight: 700;
+    }
+    span{
+      color: #1a8aff!important;
+    }
+  }
+}
+
+
+.guarantee{
+  .info-items{
+    @include tablet{
+      margin-bottom: 40px;
+    }
+    .warranty_item{
+      @include tabletS{
+        text-align: left;
+        img{
+          left: 45px;
+        }
+        .title{
+          text-align: left;
+        }
+      }
+    }
+  }
+}
